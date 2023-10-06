@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./calc.css" />
+    <title>是计算机噢~</title>
+  </head>
+  <body>
+    <div id="calculator">
+      <div id="c_title"><h2>calculator_simple</h2></div>
+      <div id="c_text">
+        <input type="text" id="text" value="0" readonly="readonly" />
+      </div>
+      <div id="c_value">
+        <ul>
+          <li onclick="get(7)">7</li>
+          <li onclick="get(8)">8</li>
+          <li onclick="get(9)">9</li>
+          <li onclick="goBack()" class="c_blue">←</li>
+          <li onclick="clearText()" class="c_blue">C</li>
+          <li onclick="get(4)">4</li>
+          <li onclick="get(5)">5</li>
+          <li onclick="get(6)">6</li>
+          <li onclick="get('*')" class="c_blue">×</li>
+          <li onclick="get('/')" class="c_blue">÷</li>
+          <li onclick="get(1)">1</li>
+          <li onclick="get(2)">2</li>
+          <li onclick="get(3)">3</li>
+          <li onclick="get('+')" class="c_blue">+</li>
+          <li onclick="get('-')" class="c_blue">-</li>
+          <li onclick="get(0)">0</li>
+          <li onclick="get('00')">00</li>
+          <li onclick="get('.')">.</li>
+          <li onclick="get('%')" class="c_blue">%</li>
+          <li onclick="eq()" class="c_yellow">=</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./calc.js"></script>

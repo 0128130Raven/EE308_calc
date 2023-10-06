@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>高级计算器</title>
+    <link rel="stylesheet" href="./calculator.css">
+  </head>
+  <body>
+    <div id="calculator">
+      <div id="c_text">
+        <input type="text" id="result" value="0" readonly="readonly" />
+      </div>
+      <div>
+        <button class="button" onclick="appendToResult('(')">(</button>
+        <button class="button" onclick="appendToResult(')')">)</button>
+        <button class="button" onclick="appendToResult('^')">^</button>
+        <button class="button" onclick="appendToResult('log(')">log</button>
+        <button class="button" onclick="appendToResult('exp(')">exp</button>
+        <button class="button" onclick="appendToResult('pow(')">pow</button>
+        <button class="button" onclick="appendToResult('ceil(')">ceil</button>
+        <button class="button" onclick="appendToResult('floor(')">floor</button>
+        <!-- 添加其他复合函数按钮，例如sin、cos等 -->
+      </div>
+      <div>
+        <button class="button" onclick="appendToResult('7')">7</button>
+        <button class="button" onclick="appendToResult('8')">8</button>
+        <button class="button" onclick="appendToResult('9')">9</button>
+        <button class="button" onclick="appendToResult('+')">+</button>
+      </div>
+      <div>
+        <button class="button" onclick="appendToResult('4')">4</button>
+        <button class="button" onclick="appendToResult('5')">5</button>
+        <button class="button" onclick="appendToResult('6')">6</button>
+        <button class="button" onclick="appendToResult('-')">-</button>
+      </div>
+      <div>
+        <button class="button" onclick="appendToResult('1')">1</button>
+        <button class="button" onclick="appendToResult('2')">2</button>
+        <button class="button" onclick="appendToResult('3')">3</button>
+        <button class="button" onclick="appendToResult('*')">*</button>
+      </div>
+      <div>
+        <button class="button" onclick="appendToResult('0')">0</button>
+        <button class="button" onclick="appendToResult('.')">.</button>
+        <button class="button" onclick="clearResult()">C</button>
+        <button class="button" onclick="calculateResult()">=</button>
+      </div>
+      <div style="color: #ccc;margin: auto;">
+        Support keyboard
+      </div>
+    </div>
+    <script src="./calculator.js"></script>
+  </body>
+</html>
