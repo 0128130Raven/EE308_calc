@@ -27,6 +27,14 @@ let history = [
   { id: 9, expression: '120 - 56', result: '64' },
   { id: 10, expression: 'pow(2,3)', result: '8' }
 ];
+const hh={
+  code: 0,
+  msg: "",
+  data:history,
+};
+setTimeout(() => {
+  console.log(hh);
+},500);
 let undoStack = []; // 存储操作历史的堆栈
 let shouldClearResult = false; // 标记是否需要清零
 let currentPage = 0;
@@ -181,4 +189,3 @@ btn.addEventListener("click", (event) => {
     showHistory();
   }
 });
-pager.addEventListener("click", (event) => {});
