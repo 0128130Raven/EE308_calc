@@ -1,4 +1,6 @@
 let result = document.getElementById("result");
+let historyList = document.getElementById('history-list');
+let history = [];
 let shouldClearResult = false; // 标记是否需要清零
 function appendToResult(value) {
   if (result.value === "0" || shouldClearResult) {
@@ -22,6 +24,10 @@ function calculateResult() {
     const expression = result.value;
     result.value = evaluateExpression(expression);
     shouldClearResult = true;
+
+    // 将计算结果和表达式添加到历史记录
+    history.push({ expression, result: result.value });
+    showHistory();
   } catch (error) {
     result.value = "Error";
     shouldClearResult = true;
@@ -29,6 +35,21 @@ function calculateResult() {
       result.value = "0";
     }, 1500);
   }
+}
+
+// 历史记录
+function showHistory() {
+  historyList.innerHTML = '';
+  history.forEach((entry, index) => {
+      const listItem = document.createElement('li');
+      const res = document.createElement('li');
+      listItem.textContent = `${entry.expression} = `;
+      res.textContent = `${entry.result}`;
+      listItem.classList.add('f1');
+      res.classList.add('f2');
+      historyList.appendChild(listItem);
+      historyList.appendChild(res);
+  });
 }
 
 function evaluateExpression(expression) {
@@ -61,9 +82,11 @@ document.addEventListener("keydown", function (event) {
     appendToResult(event.key);
   }
 });
+
 const buttons = document.querySelectorAll(".button");
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
   });
 });
+

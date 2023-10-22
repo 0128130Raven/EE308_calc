@@ -1,0 +1,22 @@
+{
+  "name": "calc_plus_back_end",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "\u001b[A\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[B\u001b[B\u001b[D\u001b[A\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.8.7"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.0-alpha1",
+    "jquery": "^3.7.1",
+    "mysql2": "^3.6.2"
+  },
+  "description": ""
+}

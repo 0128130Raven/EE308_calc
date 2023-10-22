@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>高级计算器</title>
+    <!-- <link rel="stylesheet" href="./bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./calculator.css" />
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_2164449_nalfgtq7il.css"
+    />
+  </head>
+  <body>
+    <div class="calc">
+      <div class="container1">
+        <div class="calculator">
+          <div id="c_text">
+            <input type="text" id="result" value="0" readonly="readonly" />
+          </div>
+          <div>
+            <button class="button" onclick="appendToResult('(')">(</button>
+            <button class="button" onclick="appendToResult(')')">)</button>
+            <button class="button" onclick="appendToResult('^')">^</button>
+            <button class="button" onclick="appendToResult('log(')">log</button>
+            <button class="button" onclick="appendToResult('exp(')">exp</button>
+            <button class="button" onclick="appendToResult('pow(')">pow</button>
+            <button class="button" onclick="appendToResult('ceil(')">
+              ceil
+            </button>
+            <button class="button" onclick="appendToResult('floor(')">
+              floor
+            </button>
+            <button class="button" onclick="appendToResult('sin(')">sin</button>
+            <button class="button" onclick="appendToResult('cos(')">cos</button>
+            <button class="button" onclick="appendToResult('tan(')">tan</button>
+            <button class="button" onclick="appendToResult('cot(')">cot</button>
+            <!-- 添加其他复合函数按钮，例如sin、cos等 -->
+          </div>
+          <div>
+            <button class="button" onclick="appendToResult('7')">7</button>
+            <button class="button" onclick="appendToResult('8')">8</button>
+            <button class="button" onclick="appendToResult('9')">9</button>
+            <button class="button" onclick="appendToResult(' + ')">+</button>
+          </div>
+          <div>
+            <button class="button" onclick="appendToResult('4')">4</button>
+            <button class="button" onclick="appendToResult('5')">5</button>
+            <button class="button" onclick="appendToResult('6')">6</button>
+            <button class="button" onclick="appendToResult(' - ')">-</button>
+          </div>
+          <div>
+            <button class="button" onclick="appendToResult('1')">1</button>
+            <button class="button" onclick="appendToResult('2')">2</button>
+            <button class="button" onclick="appendToResult('3')">3</button>
+            <button class="button" onclick="appendToResult('*')">*</button>
+          </div>
+          <div>
+            <button class="button" onclick="appendToResult('0')">0</button>
+            <button class="button" onclick="appendToResult('.')">.</button>
+            <button class="button" onclick="clearResult()">C</button>
+            <button class="button" onclick="calculateResult()">=</button>
+          </div>
+          <div>
+            <button class="button" onclick="appendToResult(',')">,</button>
+            <button class="button" onclick="undo()">-></button>
+            <button type="button" id="btn" class="btn btn-primary">ANS</button>
+          </div>
+          <div style="color: #ccc; margin: auto">
+            Support keyboard for numbers!
+          </div>
+        </div>
+        <div id="history" class="active calculator">
+          <h3>历史记录</h3>
+          <ul id="history-list"></ul>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- <script src="./serve.js"></script> -->
+  <script src="./calculator.js"></script>
+</html>
